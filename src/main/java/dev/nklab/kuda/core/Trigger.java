@@ -45,6 +45,10 @@ public class Trigger {
         var targetUrls = flowService.getTriggers(flowName, endpointName);
         var traceparent = DistributedTracer.trace().isTrace(isTrace).getTraceparent();
 
+        if (targetUrls == null){
+            return "done as end";
+        }
+
         var client = HttpClient.newHttpClient();
         var request = HttpRequest.newBuilder()
                 .POST(HttpRequest.BodyPublishers.ofString(new ObjectMapper().writeValueAsString(params)))
