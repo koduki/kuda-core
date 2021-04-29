@@ -53,7 +53,7 @@
             <dependency>
                 <groupId>com.google.cloud</groupId>
                 <artifactId>libraries-bom</artifactId>
-                <version>7.0.0</version>
+                <version>20.1.0</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -63,12 +63,12 @@
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-core</artifactId>
-            <version>1.7.0.Final</version>
+            <version>1.13.2.Final</version>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-resteasy-jackson</artifactId>
-            <version>1.7.0.Final</version>
+            <version>1.13.2.Final</version>
         </dependency>
         <dependency>
             <groupId>com.google.cloud</groupId>
