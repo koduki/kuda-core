@@ -44,8 +44,9 @@ public class Trigger {
 
         var targetUrls = flowService.getTriggers(flowName, endpointName);
         var traceparent = DistributedTracer.trace().isTrace(isTrace).getTraceparent();
-
-        if (targetUrls == null){
+        logger.debug("targetUrls", $("targetUrls", targetUrls.toString()));
+        
+        if (targetUrls == null || targetUrls.isEmpty()){
             return "done as end";
         }
 
